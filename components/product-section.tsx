@@ -70,7 +70,7 @@ export function ProductSection() {
               </h2>
               <p className="text-muted-foreground leading-relaxed max-w-md">
                 Inspired by Korea, designed in the USA. Crafted for the youth worldwide. Our signature tee 
-                combines cultural trends with premium materials and an affordable price.
+                combines cultural trends with premium materials at an affordable price.
               </p>
             </div>
 

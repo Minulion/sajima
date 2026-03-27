@@ -39,7 +39,7 @@ export function AboutSection() {
             <div className="space-y-6 text-background/80 leading-relaxed">
               <p>
                 SAJIMA (사지마) means &quot;do not buy&quot; in Korean. We believe that fashion is not
-                just a purchase, but an identity. Everything you wear contains a piece of you that's
+                just a purchase, but an identity. Everything you wear contains a piece of you that is
                 carried wherever you go. Not something you buy, something you are.
               </p>
               <p>
