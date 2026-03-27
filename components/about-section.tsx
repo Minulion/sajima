@@ -45,7 +45,7 @@ export function AboutSection() {
               <p>
                 Founded in the heart of Madison&apos;s teeming multicultural campus, we&apos;ve dedicated 
                 ourselves to creating meaningful designs that represent our Korean and American roots. 
-                Inspired by the viral blend of language-learning and music, the HAJIMA tee captures the
+                Inspired by the viral mashup of language-learning with music, the HAJIMA tee captures the
                 moment where cultural exchange becomes expression. It reflects a fusion of identities and
                 the confidence to take inspiration while forging your own path.
               </p>
