@@ -6,6 +6,8 @@ import { useRef } from "react";
 const stats = [
   { value: "2026", label: "Founded" },
   { value: "100%", label: "Premium Materials" },
+];
+const info = [
   { value: "Limited Pieces", label: "No Restocks" },
   { value: "Global Influence", label: "Seoul X Madison" },
 ];
@@ -65,6 +67,22 @@ export function AboutSection() {
             className="grid grid-cols-2 gap-8"
           >
             {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="border border-background/20 p-8"
+              >
+                <p className="text-4xl md:text-5xl font-mono font-bold mb-2">
+                  {stat.value}
+                </p>
+                <p className="text-sm uppercase tracking-widest text-background/60">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+            {info.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
