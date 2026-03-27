@@ -8,10 +8,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const lookbookImages = [
-  { src: "/images/model3.png", caption: "Urban Seoul" },
-  { src: "/images/model1.png", caption: "Street Elegance" },
-  { src: "/images/model2.png", caption: "Studio Minimal" },
-  { src: "/images/model4.png", caption: "Night Edition" },
+  { src: "/images/model3.png", caption: "Model 3" },
+  { src: "/images/model2.png", caption: "Model 2" },
+  { src: "/images/model1.png", caption: "Model 1" },
+  { src: "/images/model4.png", caption: "Model 4" },
+  { src: "/images/model5.png", caption: "Model 5" },
 ];
 
 export function LookbookSection() {
@@ -42,6 +43,18 @@ export function LookbookSection() {
     };
   }, [emblaApi, onSelect]);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const autoplayInterval = window.setInterval(() => {
+      emblaApi.scrollNext();
+    }, 5000);
+
+    return () => {
+      window.clearInterval(autoplayInterval);
+    };
+  }, [emblaApi]);
+
   return (
     <section id="lookbook" ref={ref} className="relative py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-6 mb-16">
@@ -71,7 +84,7 @@ export function LookbookSection() {
             {lookbookImages.map((image, index) => (
               <div
                 key={index}
-                className="flex-[0_0_80%] md:flex-[0_0_60%] lg:flex-[0_0_45%] min-w-0 pl-4 first:pl-0"
+                className="flex-[0_0_55%] md:flex-[0_0_44%] lg:flex-[0_0_33%] min-w-0 pl-4 first:pl-0"
               >
                 <motion.div
                   className={`relative aspect-[3/4] transition-all duration-500 ${
