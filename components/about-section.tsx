@@ -54,7 +54,7 @@ export function AboutSection() {
             {/* Korean text accent */}
             <div className="pt-4">
               <p className="text-6xl md:text-7xl font-bold opacity-20 tracking-tighter">
-                사지마세요
+                사지마세요.
               </p>
             </div>
           </motion.div>
