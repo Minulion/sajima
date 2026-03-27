@@ -14,25 +14,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'HEUN | Korean Streetwear',
-  description: 'Premium Korean fashion. Minimal design. Maximum impact.',
+  title: 'SAJIMA | Korean-American Streetwear',
+  description: 'Modern Korean-American fashion. Minimal price. Maximum impact.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: "/favicon.ico",
   },
 }
 

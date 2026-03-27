@@ -4,10 +4,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { value: "2019", label: "Founded" },
-  { value: "100%", label: "Korean Made" },
-  { value: "50K+", label: "Units Sold" },
-  { value: "4.9", label: "Rating" },
+  { value: "2026", label: "Founded" },
+  { value: "100%", label: "Premium Materials" },
+  { value: "Limited Pieces", label: "No Restocks" },
+  { value: "Global Influence", label: "Seoul X Madison" },
 ];
 
 export function AboutSection() {
@@ -30,26 +30,29 @@ export function AboutSection() {
                 Our Story
               </p>
               <h2 className="text-4xl md:text-5xl font-mono font-bold tracking-tight">
-                Born in Seoul
+                Born in KOR/USA
               </h2>
             </div>
             
             <div className="space-y-6 text-background/80 leading-relaxed">
               <p>
-                HEUN (흔) means &quot;trace&quot; or &quot;mark&quot; in Korean. We believe that every 
-                piece of clothing you wear should leave an impression — on you and everyone around you.
+                SAJIMA (사지마) means &quot;do not buy&quot; in Korean. We believe that fashion is not
+                just a purchase, but an identity. Everything you wear contains a piece of you that's
+                carried wherever you go. Not something you buy, something you are.
               </p>
               <p>
-                Founded in Seoul&apos;s Gangnam district, we&apos;ve dedicated ourselves to creating 
-                the perfect essential tee. No compromises. No shortcuts. Just pure, 
-                uncompromising quality.
+                Founded in the heart of Madison&apos;s teeming multicultural campus, we&apos;ve dedicated 
+                ourselves to creating meaningful designs that represent our Korean and American roots. 
+                Inspired by the viral blend of language-learning and music, the HAJIMA tee captures the
+                moment where cultural exchange becomes expression. It reflects a fusion of identities and
+                the confidence to take inspiration while forging your own path.
               </p>
             </div>
 
             {/* Korean text accent */}
             <div className="pt-4">
               <p className="text-6xl md:text-7xl font-bold opacity-20 tracking-tighter">
-                흔적
+                사지마
               </p>
             </div>
           </motion.div>
@@ -69,7 +72,7 @@ export function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="border border-background/20 p-8"
               >
-                <p className="text-4xl md:text-5xl font-mono font-bold mb-2">
+                <p className="text-xl md:text-2xl font-mono font-bold mb-2">
                   {stat.value}
                 </p>
                 <p className="text-sm uppercase tracking-widest text-background/60">

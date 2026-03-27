@@ -8,11 +8,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const lookbookImages = [
-  { src: "/images/model-1.jpg", caption: "Urban Seoul" },
-  { src: "/images/model-2.jpg", caption: "Street Elegance" },
-  { src: "/images/model-3.jpg", caption: "Studio Minimal" },
-  { src: "/images/model-4.jpg", caption: "Night Edition" },
-  { src: "/images/model-5.jpg", caption: "Duo Collection" },
+  { src: "/images/model3.png", caption: "Urban Seoul" },
+  { src: "/images/model1.png", caption: "Street Elegance" },
+  { src: "/images/model2.png", caption: "Studio Minimal" },
+  { src: "/images/model4.png", caption: "Night Edition" },
 ];
 
 export function LookbookSection() {
@@ -56,7 +55,7 @@ export function LookbookSection() {
             SS26 Lookbook
           </p>
           <h2 className="text-4xl md:text-6xl font-mono font-bold tracking-tight text-foreground">
-            Worn by Many
+            Worn Your Way
           </h2>
         </motion.div>
       </div>
@@ -87,11 +86,8 @@ export function LookbookSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-sm uppercase tracking-widest text-foreground/80">
+                    <p className="text-base uppercase tracking-widest text-foreground/80">
                       {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <p className="text-xl font-mono font-bold text-foreground">
-                      {image.caption}
                     </p>
                   </div>
                 </motion.div>
@@ -107,7 +103,7 @@ export function LookbookSection() {
               variant="outline"
               size="icon"
               onClick={scrollPrev}
-              className="size-14 border-foreground/20 hover:bg-foreground hover:text-background"
+              className="size-14 border-foreground/20 hover:bg-foreground"
             >
               <ArrowLeft className="size-5" />
             </Button>
@@ -130,7 +126,7 @@ export function LookbookSection() {
               variant="outline"
               size="icon"
               onClick={scrollNext}
-              className="size-14 border-foreground/20 hover:bg-foreground hover:text-background"
+              className="size-14 border-foreground/20 hover:bg-foreground"
             >
               <ArrowRight className="size-5" />
             </Button>

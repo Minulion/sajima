@@ -35,7 +35,7 @@ export function HeroSection() {
                 transition={{ duration: 1, delay: 0.5 }}
                 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-mono font-bold tracking-tighter leading-none text-foreground"
               >
-                HEUN
+                SAJIMA
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ export function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.7 }}
                 className="text-lg md:text-xl text-muted-foreground max-w-md leading-relaxed"
               >
-                Minimal design. Maximum impact. Premium Korean streetwear crafted for those who dare to stand out.
+                Modern Korean-American streetwear bridging the cultural divide.
               </motion.p>
             </div>
 
@@ -53,19 +53,23 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button
-                size="lg"
-                className="h-14 px-10 text-sm uppercase tracking-widest font-medium bg-foreground text-background hover:bg-foreground/90"
-              >
-                Shop Now — ₩89,000
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-14 px-10 text-sm uppercase tracking-widest font-medium border-foreground/20 hover:bg-foreground/5"
-              >
-                View Details
-              </Button>
+              <a href="https://undergroundshirts.com/groups/mhr-2026-spring-group-212" target="_blank">
+                <Button
+                  size="lg"
+                  className="h-14 px-10 text-sm uppercase tracking-widest font-medium bg-foreground text-background hover:bg-foreground/90"
+                >
+                  Shop Now — $15/₩22,500
+                </Button>
+              </a>
+              <a href="#product">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="h-14 px-10 text-sm uppercase tracking-widest font-medium border-foreground/20 hover:bg-foreground/5"
+                >
+                  View Details
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -87,8 +91,8 @@ export function HeroSection() {
                 className="relative z-10 w-full h-full"
               >
                 <Image
-                  src="/images/hero-tshirt.jpg"
-                  alt="HEUN Essential Tee"
+                  src="/images/hero-tshirt2.png"
+                  alt="SAJIMA HAJIMA Tee"
                   fill
                   className="object-contain"
                   priority

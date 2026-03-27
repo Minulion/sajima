@@ -2,9 +2,17 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Instagram } from "lucide-react";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export function Footer() {
   const ref = useRef(null);
@@ -13,7 +21,7 @@ export function Footer() {
   return (
     <footer ref={ref} className="bg-background border-t border-border">
       {/* Newsletter Section */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
@@ -41,7 +49,7 @@ export function Footer() {
             </Button>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Footer Content */}
       <div className="container mx-auto px-6 py-12">
@@ -49,18 +57,18 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <Link href="/" className="text-3xl font-mono font-bold tracking-tighter text-foreground">
-              HEUN
+              SAJIMA
             </Link>
             <p className="text-muted-foreground max-w-sm">
-              Premium Korean streetwear. Minimal design. Maximum impact.
+              Modern Korean-American streetwear. Minimal price. Maximum impact.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="https://www.instagram.com/donotinkorean/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Instagram className="size-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              {/* <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Twitter className="size-5" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -70,15 +78,38 @@ export function Footer() {
               Shop
             </p>
             <nav className="flex flex-col gap-3">
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                Essential Tee
+              <Link href="#product" className="w-fit text-muted-foreground hover:text-foreground transition-colors">
+                HAJIMA Tee
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                Size Guide
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button
+                    type="button"
+                    className="w-fit text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    Size Guide
+                  </button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogTitle className="uppercase tracking-widest font-medium">
+                    Size Guide
+                  </DialogTitle>
+                  <DialogDescription className="sr-only">
+                    Size guide image for the HAJIMA Tee.
+                  </DialogDescription>
+                  <div>
+                    <Image
+                      src="/images/size-guide.png"
+                      alt="SAJIMA HAJIMA Tee size guide"
+                      width={1168}
+                      height={609}
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
+              {/* <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 Care Instructions
-              </Link>
+              </Link> */}
             </nav>
           </div>
 
@@ -87,15 +118,15 @@ export function Footer() {
               Support
             </p>
             <nav className="flex flex-col gap-3">
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/shipping-and-returns" className="w-fit text-muted-foreground hover:text-foreground transition-colors">
                 Shipping & Returns
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="mailto:akim227@wisc.edu" className="w-fit text-muted-foreground hover:text-foreground transition-colors">
                 Contact Us
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              {/* <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 FAQ
-              </Link>
+              </Link> */}
             </nav>
           </div>
         </div>
@@ -103,16 +134,16 @@ export function Footer() {
         {/* Copyright */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2026 HEUN. All rights reserved.
+            © 2026 SAJIMA. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          {/* <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-foreground transition-colors">
               Privacy Policy
             </Link>
             <Link href="#" className="hover:text-foreground transition-colors">
               Terms of Service
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
